@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Functions>
+	<Function Name="HouseWinLossByProducts">
+		<Setting Key="HouseWinLoss-Soccer-Minor-SportType" SpName="Acc_Rpt_DailyWinLossSoccerMinorBetTypes_Lvl1" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinLoss-Soccer-Minor-BetType" SpName="Acc_Rpt_DailyWinLossSoccerMinorBetTypes_Lvl2" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_Lvl1" SpName="Acc_Rpt_HouseWinlossByProducts_Lvl1" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_Lvl2" SpName="Acc_Rpt_HouseWinlossByProducts_Lvl2" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_Parlay" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_Parlay" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_Sportsbook_MajorMinor" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_Sportsbook_MajorMinor" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_Sportsbook_Sporttype" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_Sportsbook_Sporttype" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_Sportsbook_Bettype" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_Sportsbook_Bettype" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_Sportsbook_MatchDetail" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_Sportsbook_MatchDetail" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_Sportsbook_Site" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_Sportsbook_Site" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_NumberGame" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_NumberGame" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_3rd_Bettype" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_3rd_Bettype" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_3rd_MatchDetail" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_3rd_MatchDetail" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_LvlN_3rd_Site" SpName="Acc_Rpt_HouseWinlossByProducts_LvlN_3rd_Site" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+		<Setting Key="HouseWinlossByProducts_Lvl2_BettypePerformance" SpName="Acc_Rpt_HouseWinlossByProducts_BettypePerformance" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+	</Function>
+	<Function Name="Permission">
+		<Setting Key="Permission-GetPermisionProfileID" SpName="Acc_Rpt_GetPermisionProfileID" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="180" />
+	</Function>
+	<Function Name="Core - Report Service">
+		<Setting Key="GetBalanceUpRange" SpName="Age_SelBalanceUpDay" DbName="DBAGE.bodb02.wsv_nap">
+			<Mapping DataField="BalanceUpDay" ObjectProperty="BalanceUpDate" />
+			<Mapping DataField="MoveBetsDay" ObjectProperty="MoveBetsDate" />
+		</Setting>
+	</Function>
+	<Function Name="SMA Win Loss">
+		<Setting Key="SMAWinLoss-CurrencySel" SpName="Acc_Rpt_SMAWinlossSummary_CurrencySel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SMAWinLoss-Summary" SpName="Acc_Rpt_SMAWinlossSummary" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="0" />
+		<Setting Key="SMAWinLoss-SiteSel" SpName="Acc_Rpt_SiteList" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SMAWinLoss-SportSel" SpName="Acc_Rpt_SMAWinlossSummary_SportSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SMAWinLoss-VirtualRate" SpName="Acc_Rpt_SMAWinlossSummary_CustVirtualMultiplierSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SMAWinLoss-LeagueGroupSel" SpName="Acc_Rpt_SMAWinlossSummary_LeagueGroupSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SMAWinLoss-AvailabeDatabaseQuery" SpName="Acc_CheckDailyTaskReadiness" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SMAWinLoss-ReportLatestDate" SpName="Acc_Rpt_SMAWinlossSummary_ReportLatestDate" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SMAWinLoss-BetFromSel" SpName="Acc_Rpt_SMAWinlossSummary_BetfromSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+	</Function>
+	<Function Name="SBPerformance">
+		<Setting Key="SBPerformanceMonitor-Dashboard" SpName="Acc_Rpt_SBPerformanceMonitor_Dashboard_DWH" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SBPerformanceMonitor-Site" SpName="Acc_Rpt_SBPerformanceMonitor_DWH_Site" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SBPerformanceMonitor-Sport" SpName="Acc_Rpt_SBPerformanceMonitor_DWH_Sport" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SBPerformanceMonitor-League" SpName="Acc_Rpt_SBPerformanceMonitor_DWH_League" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="SBPerformanceMonitor-Member" SpName="Acc_Rpt_SBPerformanceMonitor_DWH_Member" DbName="DBWH.bodb_dwrs.wsv_nap" />
+	</Function>
+	<Function Name="Abnormal Bet Report">
+		<Setting Key="Acc_Rpt_AbnormalBet_SportSel" SpName="Acc_Rpt_AbnormalBet_SportSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_AbnormalBet_ReasonSel" SpName="Acc_Rpt_AbnormalBet_ReasonSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_AbnormalBet_Member" SpName="Acc_Rpt_AbnormalBet_Member" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_AbnormalBet_LicenseeSel" SpName="Acc_Rpt_SiteList" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_AbnormalBet_BetTypeSel" SpName="Acc_Rpt_AbnormalBet_BetTypeSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_AbnormalBet_Licensee" SpName="Acc_Rpt_AbnormalBet_Licensee" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_AbnormalBet_CurrencySel" SpName="Acc_Rpt_AbnormalBet_CurrencySel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_AbnormalBet_LeagueSel" SpName="Acc_Rpt_AbnormalBet_LeagueSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+	</Function>
+	<Function Name="Actual-Member-Bet">
+		<Setting Key="Actual-Member-Bet-Site" SpName="Acc_Rpt_ActualMemberBet_SiteTypeSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Actual-Member-Bet-Odds" SpName="Acc_Rpt_ActualMemberBet_OddsTypeSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Actual-Member-Bet-BetType" SpName="Acc_Rpt_ActualMemberBet_Detail" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Actual-Member-Bet-Product" SpName="Acc_Rpt_ActualMemberBet" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Actual-Member-Bet-Currency" SpName="Acc_Rpt_ActualMemberBet_CurrencySel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+	</Function>
+	<Function Name="Misc - Exchange">
+		<Setting Key="Exchange-ReportQuery" SpName="Acc_Rpt_ExchangePerformance" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Exchange-SportQuery" SpName="Acc_Rpt_ExchangePerformance_SporttypeSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Exchange-LicenseeQuery" SpName="Acc_Rpt_ExchangePerformance_LicenseesSel" DbName="DBEXT.bodb02.wsv_nap" />
+	</Function>
+	<Function Name="CashOutPerformance">
+		<Setting Key="Acc_Rpt_COPerformance_SportSel" SpName="Acc_Rpt_COPerformance_SportSel" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_LeagueGroupSel" SpName="Acc_Rpt_COPerformance_LeagueGroupSel" TimeOut="0" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_SportType_Bettrans" SpName="Acc_Rpt_COPerformance_SportType" TimeOut="0" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_LiveStatus_Bettrans" SpName="Acc_Rpt_COPerformance_LiveStatus" TimeOut="0" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_BetType_Bettrans" SpName="Acc_Rpt_COPerformance_BetType" TimeOut="0" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_Cust_Bettrans" SpName="Acc_Rpt_COPerformance_Cust" TimeOut="0" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_SportType_WareHouse" SpName="Acc_Rpt_COPerformance_SportType" TimeOut="0" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_LiveStatus_WareHouse" SpName="Acc_Rpt_COPerformance_LiveStatus" TimeOut="0" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_BetType_WareHouse" SpName="Acc_Rpt_COPerformance_BetType" TimeOut="0" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_Cust_WareHouse" SpName="Acc_Rpt_COPerformance_Cust" TimeOut="0" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_LeagueSel" SpName="Acc_Rpt_COPerformance_LeagueSel" TimeOut="0" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_COPerformance_LicenseesSel" SpName="Acc_Rpt_SiteList" DbName="DBWH.bodb_dwrs.wsv_nap" />
+	</Function>
+	<Function Name="Misc - Updated And Credit List">
+		<Setting Key="Acc_Rpt_AdminUpdateUserName" SpName="Acc_Rpt_AdminUpdateUserName" DbName="DBLOG.bodb_CustomerLog.wsv_nap" TimeOut="0" />
+		<Setting Key="Acc_Rpt_AdminUpdateCredit" SpName="Acc_Rpt_AdminUpdateCredit" DbName="DBLOG.bodb_CustomerLog.wsv_nap" TimeOut="0" />
+	</Function>
+	<Function Name="SBCustomerPerformanceByDangers">
+		<Setting Key="Acc_Rpt_SBCustPerfByDangerLevel_DivisionSel" SpName="Acc_Rpt_SiteList" TimeOut="0" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_SBCustPerfByDangerLevel_WareHouse" SpName="Acc_Rpt_SBCustPerfByDangerLevel" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="150"/>
+		<Setting Key="Acc_Rpt_SBCustPerfByDangerLevel_LeagueBySportSel" SpName="Acc_Rpt_SBCustPerfByDangerLevel_LeagueBySportSel" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_SBCustPerfByDangerLevel_LeagueGroupBySportSel" SpName="Acc_Rpt_SBCustPerfByDangerLevel_LeagueGroupBySportSel" DbName="DBACC.bodb02.wsv_nap" />
+		<Setting Key="Acc_Rpt_SBCustPerfByDangerLevel_SportSel" SpName="Acc_Rpt_SBCustPerfByDangerLevel_SportSel" DbName="DBACC.bodb02.wsv_nap" />
+	</Function>
+	<Function Name="Punter-Analysis">
+		<Setting Key="Punter-BetCount" SpName="Acc_Punter_Top_DrillDownBetcount" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-BetType" SpName="Acc_Punter_Top_DrillDownUsernameSportType" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-League" SpName="Acc_Punter_Top_DrillDownUsernameSportBetType" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-SportType" SpName="Acc_Punter_Top_DrillDownUsername" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-Summary" SpName="Acc_Punter_TopByUsername" DbName="DBWH.bodb_dwrs.wsv_nap" />
+
+		<Setting Key="Punter-ProductSportBetTypeQuery" SpName="Acc_Punter_ProductSportBetType" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="0">
+			<Mapping DataField="ProductName" ObjectProperty="ProductName" />
+			<Mapping DataField="SportGroup" ObjectProperty="SportGroup" />
+			<Mapping DataField="SportName" ObjectProperty="SportName" />
+			<Mapping DataField="BettypeGroup" ObjectProperty="BetTypeGroup" />
+			<Mapping DataField="BettypeName" ObjectProperty="BetTypeName" />
+			<Mapping DataField="Value" ObjectProperty="Value" />
+			<Mapping DataField="RenderType" ObjectProperty="RenderType" />
+		</Setting>
+		<Setting Key="Punter-AvailabeDatabaseQuery" SpName="Acc_CheckDailyTaskReadiness" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-AvailableDateRangeQuery" SpName="Acc_Punter_GetDateRangeSupport" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-SportsbookSportBetTypeQuery" SpName="Acc_Punter_League_ProductSportBetType" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="0">
+			<Mapping DataField="SportType" ObjectProperty="SportType" />
+			<Mapping DataField="SportName" ObjectProperty="SportName" />
+			<Mapping DataField="BettypeName" ObjectProperty="BetTypeName" />
+			<Mapping DataField="CombinationID" ObjectProperty="CombinationId" />
+		</Setting>
+		<Setting Key="Punter-SportTypeLeagueQuery" SpName="Acc_Punter_GetLeagueBySport" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="0">
+			<Mapping DataField="leagueids" ObjectProperty="LeagueId" />
+			<Mapping DataField="LeagueName" ObjectProperty="LeagueName" />
+		</Setting>
+		<Setting Key="Punter-Performance-BetType" SpName="Acc_Punter_PerformanceTopBettype" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-Performance-Event" SpName="Acc_Punter_PerformanceEventtype" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-Performance-Month" SpName="Acc_Punter_PerformanceByMonth" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-Performance-ProductTurnover" SpName="Acc_Punter_PerformanceByProduct" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-Performance-Sport" SpName="Acc_Punter_PerformanceTopSporttype" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-Performance-SportsbookBetCount" SpName="Acc_Punter_PerformanceByEventtype" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-Performance-SportsbookSport" SpName="Acc_Punter_PerformanceBySport" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-PerformanceOfMembers" SpName="Acc_Punter_Top_DrillDownAssocAcc" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-LeagueGroupQuery" SpName="Acc_Punter_LeagueGroup" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="0">
+			<Mapping DataField="SportType" ObjectProperty="SportType" />
+			<Mapping DataField="Sport" ObjectProperty="Sport" />
+			<Mapping DataField="LeagueGroupID" ObjectProperty="LeagueGroupId" />
+			<Mapping DataField="LeagueGroupName" ObjectProperty="LeagueGroupName" />
+		</Setting>
+		<Setting Key="Punter-Game" SpName="Acc_Punter_Top_DrillDownSportEsport" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-BetTypeGroup" SpName="Acc_Punter_Top_DrillDownLeagueGroupEsport" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-GameBetType" SpName="Acc_Punter_Top_DrillDownBettypeGroupEsport" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Punter-UserNameSuggestion" SpName="Acc_CustomerSelUserSearch" DbName="DBAGE.bodb02.wsv_nap" />
+	</Function>
+	<Function Name="Bet List">
+		<Setting Key="BetList_ScoreInformation" SpName="Acc_Rpt_DailyWLDirect_Result" DbName="DBACC.bodb02.wsv_nap" TimeOut="600" />
+	</Function>
+	<Function Name="Daily Mix Parlay Win Loss">
+		<Setting Key="DailyMixParlayWinLoss_GetCombinationWinLoss" SpName="Acc_Rpt_DailyParlayWinloss_DW" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600" />
+		<Setting Key="DailyMixParlayWinLoss_GetAdvanceMixParlay" SpName="Acc_Rpt_MixParlay_Advance_Dw" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600" />
+	</Function>
+	<Function Name="ResultAnalysis">
+		<Setting Key="Acc_Rpt_ResultAnalysis_LeagueSel" SpName="Acc_Rpt_ResultAnalysis_LeagueSel" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_ResultAnalysis" SpName="Acc_Rpt_ResultAnalysis" DbName="DBWH.bodb_dwrs.wsv_nap" />
+	</Function>
+	<Function Name="Legend Management - Core">
+		<Setting Key="LegendManagement_SelReportLegend" SpName="Acc_FunctionLegendSel" DbName="DBMA.bodb_Maintenance.wsv_nap" > </Setting>
+		<Setting Key="LegendManagement_SaveReportLegend" SpName="Acc_FunctionLegendUpd" DbName="DBMA.bodb_Maintenance.wsv_nap" > </Setting>
+		<Setting Key="LegendManagement_SaveReportLegendMapping" SpName="Acc_FunctionLegendCopy" DbName="DBMA.bodb_Maintenance.wsv_nap" > </Setting>
+		<Setting Key="LegendManagement_GetInputedLegend" SpName="ReportLegend_GetInputedLegend" DbName="DBMA.bodb_Maintenance.wsv_nap" > </Setting>
+	</Function>
+	<Function Name="Win Loss - Tree Win Loss">
+		<Setting Key="WinLoss_TreeWinLoss_GetDataByProduct" SpName="Acc_Rpt_TreeWinlostByProduct_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600">
+			<Mapping DataField="currency" ObjectProperty="Id" />
+			<Mapping DataField="CurrencyName" ObjectProperty="Name" />
+			<Mapping DataField="winloss" ObjectProperty="WinLoss" />
+			<Mapping DataField="ExtraAmount" ObjectProperty="ExtraAmount" />
+			<Mapping DataField="turnover" ObjectProperty="Turnover" />
+			<Mapping DataField="commission" ObjectProperty="Commission" />
+			<Mapping DataField="total" ObjectProperty="WinLossTotal" />
+			<Mapping DataField="turnoverRM" ObjectProperty="BaseRMTurnover" />
+			<Mapping DataField="Virtual_Turnover" ObjectProperty="BaseRMVirtualTurnover" />
+			<Mapping DataField="totalRM" ObjectProperty="BaseRMTotal" />
+			<Mapping DataField="virtual_total" ObjectProperty="BaseRMVirtualTotal" />
+			<Mapping DataField="WLVariance+" ObjectProperty="BaseRMWinLossVariancePlus" />
+			<Mapping DataField="WLVariance-" ObjectProperty="BaseRMWinLossVarianceMinus" />
+			<Mapping DataField="WLVarianceTotal" ObjectProperty="BaseRMWinLossVarianceTotal" />
+			<Mapping DataField="TOVariance+" ObjectProperty="BaseRMTurnoverVariancePlus" />
+			<Mapping DataField="TOVariance-" ObjectProperty="BaseRMTurnoverVarianceMinus" />
+			<Mapping DataField="TOVarianceTotal" ObjectProperty="BaseRMTurnoverVarianceAbsoluteTotal" />
+		</Setting>
+		<Setting Key="WinLoss_TreeWinLoss_GetDataByCom" SpName="Acc_Rpt_TreeWinlostByCom_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600">
+			<Mapping DataField="srecommend" ObjectProperty="Id" />
+			<Mapping DataField="Username" ObjectProperty="Name" />
+			<Mapping DataField="VirtualRate" ObjectProperty="VirtualRate" />
+			<Mapping DataField="winloss" ObjectProperty="WinLoss" />
+			<Mapping DataField="ExtraAmount" ObjectProperty="ExtraAmount" />
+			<Mapping DataField="turnover" ObjectProperty="Turnover" />
+			<Mapping DataField="commission" ObjectProperty="Commission" />
+			<Mapping DataField="total" ObjectProperty="WinLossTotal" />
+			<Mapping DataField="turnoverRM" ObjectProperty="BaseRMTurnover" />
+			<Mapping DataField="Virtual_Turnover" ObjectProperty="BaseRMVirtualTurnover" />
+			<Mapping DataField="totalRM" ObjectProperty="BaseRMTotal" />
+			<Mapping DataField="virtual_total" ObjectProperty="BaseRMVirtualTotal" />
+			<Mapping DataField="WLVariance+" ObjectProperty="BaseRMWinLossVariancePlus" />
+			<Mapping DataField="WLVariance-" ObjectProperty="BaseRMWinLossVarianceMinus" />
+			<Mapping DataField="WLVarianceTotal" ObjectProperty="BaseRMWinLossVarianceTotal" />
+			<Mapping DataField="TOVariance+" ObjectProperty="BaseRMTurnoverVariancePlus" />
+			<Mapping DataField="TOVariance-" ObjectProperty="BaseRMTurnoverVarianceMinus" />
+			<Mapping DataField="TOVarianceTotal" ObjectProperty="BaseRMTurnoverVarianceAbsoluteTotal" />
+		</Setting>
+		<Setting Key="WinLoss_TreeWinLoss_GetDataBySuper" SpName="Acc_Rpt_TreeWinlostBySAg_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600">
+			<Mapping DataField="mrecommend" ObjectProperty="Id" />
+			<Mapping DataField="Username" ObjectProperty="Name" />
+			<Mapping DataField="VirtualRate" ObjectProperty="VirtualRate" />
+			<Mapping DataField="winloss" ObjectProperty="WinLoss" />
+			<Mapping DataField="ExtraAmount" ObjectProperty="ExtraAmount" />
+			<Mapping DataField="turnover" ObjectProperty="Turnover" />
+			<Mapping DataField="commission" ObjectProperty="Commission" />
+			<Mapping DataField="total" ObjectProperty="WinLossTotal" />
+			<Mapping DataField="turnoverRM" ObjectProperty="BaseRMTurnover" />
+			<Mapping DataField="Virtual_Turnover" ObjectProperty="BaseRMVirtualTurnover" />
+			<Mapping DataField="totalRM" ObjectProperty="BaseRMTotal" />
+			<Mapping DataField="virtual_total" ObjectProperty="BaseRMVirtualTotal" />
+			<Mapping DataField="WLVariance+" ObjectProperty="BaseRMWinLossVariancePlus" />
+			<Mapping DataField="WLVariance-" ObjectProperty="BaseRMWinLossVarianceMinus" />
+			<Mapping DataField="WLVarianceTotal" ObjectProperty="BaseRMWinLossVarianceTotal" />
+			<Mapping DataField="TOVariance+" ObjectProperty="BaseRMTurnoverVariancePlus" />
+			<Mapping DataField="TOVariance-" ObjectProperty="BaseRMTurnoverVarianceMinus" />
+			<Mapping DataField="TOVarianceTotal" ObjectProperty="BaseRMTurnoverVarianceAbsoluteTotal" />
+		</Setting>
+		<Setting Key="WinLoss_TreeWinLoss_GetDataByMaster" SpName="Acc_Rpt_TreeWinlostByMAg_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600">
+			<Mapping DataField="recommend" ObjectProperty="Id" />
+			<Mapping DataField="Username" ObjectProperty="Name" />
+			<Mapping DataField="VirtualRate" ObjectProperty="VirtualRate" />
+			<Mapping DataField="winloss" ObjectProperty="WinLoss" />
+			<Mapping DataField="ExtraAmount" ObjectProperty="ExtraAmount" />
+			<Mapping DataField="turnover" ObjectProperty="Turnover" />
+			<Mapping DataField="commission" ObjectProperty="Commission" />
+			<Mapping DataField="total" ObjectProperty="WinLossTotal" />
+			<Mapping DataField="turnoverRM" ObjectProperty="BaseRMTurnover" />
+			<Mapping DataField="Virtual_Turnover" ObjectProperty="BaseRMVirtualTurnover" />
+			<Mapping DataField="totalRM" ObjectProperty="BaseRMTotal" />
+			<Mapping DataField="virtual_total" ObjectProperty="BaseRMVirtualTotal" />
+			<Mapping DataField="WLVariance+" ObjectProperty="BaseRMWinLossVariancePlus" />
+			<Mapping DataField="WLVariance-" ObjectProperty="BaseRMWinLossVarianceMinus" />
+			<Mapping DataField="WLVarianceTotal" ObjectProperty="BaseRMWinLossVarianceTotal" />
+			<Mapping DataField="TOVariance+" ObjectProperty="BaseRMTurnoverVariancePlus" />
+			<Mapping DataField="TOVariance-" ObjectProperty="BaseRMTurnoverVarianceMinus" />
+			<Mapping DataField="TOVarianceTotal" ObjectProperty="BaseRMTurnoverVarianceAbsoluteTotal" />
+		</Setting>
+		<Setting Key="WinLoss_TreeWinLoss_GetDataByAgent" SpName="Acc_Rpt_TreeWinlostByAg_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600">
+			<Mapping DataField="CustID" ObjectProperty="Id" />
+			<Mapping DataField="Username" ObjectProperty="Name" />
+			<Mapping DataField="VirtualRate" ObjectProperty="VirtualRate" />
+			<Mapping DataField="winloss" ObjectProperty="WinLoss" />
+			<Mapping DataField="ExtraAmount" ObjectProperty="ExtraAmount" />
+			<Mapping DataField="turnover" ObjectProperty="Turnover" />
+			<Mapping DataField="commission" ObjectProperty="Commission" />
+			<Mapping DataField="total" ObjectProperty="WinLossTotal" />
+			<Mapping DataField="turnoverRM" ObjectProperty="BaseRMTurnover" />
+			<Mapping DataField="Virtual_Turnover" ObjectProperty="BaseRMVirtualTurnover" />
+			<Mapping DataField="totalRM" ObjectProperty="BaseRMTotal" />
+			<Mapping DataField="virtual_total" ObjectProperty="BaseRMVirtualTotal" />
+			<Mapping DataField="WLVariance+" ObjectProperty="BaseRMWinLossVariancePlus" />
+			<Mapping DataField="WLVariance-" ObjectProperty="BaseRMWinLossVarianceMinus" />
+			<Mapping DataField="WLVarianceTotal" ObjectProperty="BaseRMWinLossVarianceTotal" />
+			<Mapping DataField="TOVariance+" ObjectProperty="BaseRMTurnoverVariancePlus" />
+			<Mapping DataField="TOVariance-" ObjectProperty="BaseRMTurnoverVarianceMinus" />
+			<Mapping DataField="TOVarianceTotal" ObjectProperty="BaseRMTurnoverVarianceAbsoluteTotal" />
+		</Setting>
+		<Setting Key="WinLoss_TreeWinLoss_GetVirtualRate" SpName="Acc_Rpt_TreeWinlost_CustomerSelVirtualMultiplier" DbName="DBACC.bodb02.wsv_nap" TimeOut="600">
+			<Mapping DataField="Min_VirtualMultiplier" ObjectProperty="MinVirtualMultiplier" />
+			<Mapping DataField="Max_VirtualMultiplier" ObjectProperty="MaxVirtualMultiplier" />
+			<Mapping DataField="VRLockedStatus_Soccer" ObjectProperty="VirtualRateLockedStatusSoccer" />
+			<Mapping DataField="VRLockedStatus_OS" ObjectProperty="VirtualRateLockedStatusOtherSports" />
+		</Setting>
+		<Setting Key="WinLoss_TreeWinLoss_GetAllVirtualRate" SpName="Acc_Rpt_TreeWinlostBulkGetVR" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Acc_Rpt_TreeWinlostListProduct" SpName="Acc_Rpt_TreeWinlostListProduct" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="WinLoss_TreeWinLoss_GetSport" SpName="Acc_Rpt_TreeWinlost_SporttypeSel" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="WinLoss_TreeWinLoss_VirtualRateHistory" SpName="Acc_CustomerSelVirtualRateHistory" DbName="DBLOG.bodb_CustomerLog.wsv_nap" TimeOut="600"></Setting>
+	</Function>
+	<Function Name="Licensee - Negative Balance">
+		<Setting Key="Licensee_NegativeBalance_GetReport" SpName="Acc_Rpt_NegativeBalanceMember_Dep" DbName="DBEXT.bodb02.wsv_nap" TimeOut="600" />
+		<Setting Key="Licensee_NegativeBalance_GetLicensee" SpName="Acc_Rpt_NegativeBalance_GetLicensees" DbName="DBEXT.bodb02.wsv_nap" TimeOut="600" />
+	 </Function>
+	<Function Name="Licensee - Peak Concurrent User">
+		<Setting Key="Licensee_PeakConcurrentUser_GetLicensee" SpName="Acc_Rpt_PeakConcurrentUser_GetLicensees" DbName="DBEXT.bodb02.wsv_nap" TimeOut="600">
+			<Mapping DataField="EnableBA" ObjectProperty="IsEnabledBA" />
+		</Setting>
+		<Setting Key="Licensee_PeakConcurrentUser_GetReport" SpName="Acc_Rpt_LicenseeOnlineUserSel" DbName="DBONUSER.ON_USER.wsv_nap" />
+	</Function>
+	<Function Name="Licensee - Company Win Loss">
+		<Setting Key="Licensee_Core_GetCurrencies" SpName="Acc_SelCurrencyByLicensee" DbName="DBEXT.bodb02.wsv_nap" TimeOut="600">
+			<Mapping DataField="currency" ObjectProperty="CurrencyId" />
+		</Setting>
+		<Setting Key="Acc_GetProductListByLicenseId" SpName="Acc_GetProductListByLicenseId" DbName="DBEXT.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Acc_Rpt_CompanyWinloss" SpName="Acc_Rpt_CompanyWinloss" DbName="DBEXT.bodb02.wsv_nap" TimeOut="600">
+			<Mapping DataField="CompanyWL" ObjectProperty="CompanyWinLoss" />
+		</Setting>
+		<Setting Key="Licensee_CompanyWinloss_GetLicensee" SpName="Acc_Rpt_CompanyWinloss_GetLicensees" DbName="DBEXT.bodb02.wsv_nap" TimeOut="600" />
+	</Function>
+	<Function Name="Balance">
+		<Setting Key="Balance_DirectBalance_DirectMaster" SpName="Acc_Rpt_Balance_Direct_Master" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_DirectBalance_DirectAgent" SpName="Acc_Rpt_Balance_Direct_Agent" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_DirectBalance_DirectMember" SpName="Acc_Rpt_Balance_Direct_Member" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_DirectBalance_DirectMasterYesterday" SpName="Acc_Rpt_Balance_Direct_Master_Yesterday" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_DirectBalance_DirectAgentYesterday" SpName="Acc_Rpt_Balance_Direct_Agent_Yesterday" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_DirectBalance_DirectMemberYesterday" SpName="Acc_Rpt_Balance_Direct_Member_Yesterday" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_Super" SpName="Acc_Rpt_Balance_Super" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_Master" SpName="Acc_Rpt_Balance_Master" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_Agent" SpName="Acc_Rpt_Balance_Agent" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_Member" SpName="Acc_Rpt_Balance_Member" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_SuperYesterday" SpName="Acc_Rpt_Balance_Super_Yesterday" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_MasterYesterday" SpName="Acc_Rpt_Balance_Master_Yesterday" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_AgentYesterday" SpName="Acc_Rpt_Balance_Agent_Yesterday" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+		<Setting Key="Balance_SuperBalance_MemberYesterday" SpName="Acc_Rpt_Balance_Member_Yesterday" DbName="DBACC.bodb02.wsv_nap" TimeOut="600"></Setting>
+	</Function>
+	<Function Name="Core - Currencies">
+		<Setting Key="NAP_ExchangeCurrencySel" SpName="NAP_ExchangeCurrencySel" DbName="DBAGE.bodb02.wsv_nap">
+			<Mapping DataField="exchangeid" ObjectProperty="CurrencyId" />
+			<Mapping DataField="currency" ObjectProperty="CurrencyName" />
+		</Setting>
+	</Function>
+	<Function Name="Balance - Company Balance Difference">
+		<Setting Key="Balance_CompanyBalanceDifference_GetReport" SpName="Acc_Rpt_Balance_Company_History" DbName="DBSUM.bodb_Summary.wsv_nap" TimeOut="600">
+			<Mapping DataField="CompBalBefore" ObjectProperty="CompanyBalanceBefore" />
+			<Mapping DataField="CompBalAfter" ObjectProperty="CompanyBalanceAfter" />
+		</Setting>
+	</Function>
+	<Function Name="Fraud and Risk - Margin Report">
+		<Setting Key ="Special_MarginReport_BetRatioByUser" SpName="Acc_Rpt_BetRatioByUser" DbName="DBACC.bodb02.wsv_nap">
+			<Mapping DataField="TotalWon" ObjectProperty="WinningAmount" />
+			<Mapping DataField="n" ObjectProperty="TotalBet" />
+			<Mapping DataField="bettype" ObjectProperty="BettypeId" />
+		</Setting>
+	</Function>
+	<Function Name="Misc - Daily Created Customers">
+		<Setting Key="Misc_DailyCreatedCustomers_GetReport" SpName="Acc_DailyCreatedCustomer" DbName="DBACC.bodb02.wsv_nap" TimeOut="600">
+			<Mapping DataField="CreateDate" ObjectProperty="CreatedDate" />
+			<Mapping DataField="AmountSAg" ObjectProperty="SuperAmount" />
+			<Mapping DataField="AmountMaster" ObjectProperty="MasterAmount" />
+			<Mapping DataField="AmountAgent" ObjectProperty="AgentAmount" />
+			<Mapping DataField="AmountMAg" ObjectProperty="DirectMasterAmount" />
+			<Mapping DataField="AmountAg" ObjectProperty="DirectAgentAmount" />
+			<Mapping DataField="AmountMember" ObjectProperty="MemberAmount" />
+		</Setting>
+		<Setting Key="Misc_DailyCreatedCustomers_GetDetailReport" SpName="Acc_DailyCreatedCustomer_Details" DbName="DBACC.bodb02.wsv_nap" TimeOut="600">
+			<Mapping DataField="creatdate" ObjectProperty="CreatedDate" />
+		</Setting>
+	</Function>
+	<Function Name="Misc - Total SMA Member Active">
+		<Setting Key="Misc_TotalSMAMemberActive_GetReport" SpName="Acc_rpt_CustStatus" DbName="DBRPT.bodb_Report.wsv_nap" TimeOut="600" />
+		<Setting Key="Misc_TotalSMAMemberActive_GetStatusDetail" SpName="Acc_rpt_CustStatusDetails" DbName="DBRPT.bodb_Report.wsv_nap" TimeOut="600">
+			<Mapping DataField="creatdate" ObjectProperty="CreatedTime" />
+		</Setting>
+		<Setting Key="Misc_TotalSMAMemberActive_GetSites" SpName="Acc_Rpt_TotalSMAMemberActive_SiteSel" DbName="DBRPT.bodb_Report.wsv_nap" TimeOut="600">
+			<Mapping DataField="SiteId" ObjectProperty="Id" />
+			<Mapping DataField="Site" ObjectProperty="Name" />
+		</Setting>
+	</Function>
+	<Function Name="Misc - Bet Count">
+		<Setting Key="Misc_Bet_Count_GetProducts" SpName="Acc_Rpt_BetCount_SelProductSportBettypes" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Misc_BetCount_GetBetCountReport" SpName="Acc_Rpt_BetCount" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600">
+			<Mapping DataField="Site" ObjectProperty="SiteName" />
+			<Mapping DataField="MemberWL" ObjectProperty="MemberWinLoss" />
+			<Mapping DataField="AgentWL" ObjectProperty="AgentWinLoss" />
+			<Mapping DataField="MasterWL" ObjectProperty="MasterWinLoss" />
+			<Mapping DataField="SuperWL" ObjectProperty="SuperWinLoss" />
+			<Mapping DataField="SMAWL" ObjectProperty="TotalWinLoss" />
+			<Mapping DataField="RealIncome" ObjectProperty="CompanyWinLoss" />
+		</Setting>
+	</Function>
+	<Function Name="Misc - Credit movement">
+		<Setting Key="Misc_CreditMovement_GetReport" SpName="Acc_Rpt_CreditMovement" DbName="DBLOG.bodb_CustomerLog.wsv_nap" TimeOut="600" />
+		<Setting Key="Misc_CreditMovement_GetSites" SpName="Acc_Rpt_SiteList" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600" />
+	</Function>
+	<Function Name="Fraud and Risk - Parlay Won">
+		<Setting Key="ParlayWon_GetReport" SpName="Acc_Rpt_ParlayWon" DbName="DBAGE.bodb02.wsv_nap">
+			<Mapping DataField="Actual_Stake" ObjectProperty="ActualStake" />
+			<Mapping DataField="Winlost" ObjectProperty="WinLoss" />
+			<Mapping DataField="Actual_Stake_RM" ObjectProperty="ActualStakeRM" />
+			<Mapping DataField="Winlost_RM" ObjectProperty="WinLossRM" />
+			<Mapping DataField="CompanyStake_RM" ObjectProperty="CompanyStakeRM" />
+			<Mapping DataField="CompanyActual_Stake_RM" ObjectProperty="CompanyActualStakeRM" />
+			<Mapping DataField="CompanyWinlost_RM" ObjectProperty="CompanyWinLossRM" />
+		</Setting>
+	</Function>
+	 <Function Name="Main - Trader Performance">
+		<Setting Key="Main_TraderPerformance_GetReport" SpName="Acc_Rpt_TraderPerformanceSum" DbName="DBACC.bodb02.wsv_nap" TimeOut="600" />
+		<Setting Key="Main_TraderPerformance_GetDetailReport" SpName="Acc_Rpt_TraderPerformanceDetail" DbName="DBACC.bodb02.wsv_nap" TimeOut="600" />
+		<Setting Key="Main_TraderPerformance_GetReport_PH" SpName="Acc_Rpt_TraderPerformanceSum_SoccerPH" DbName="DBACC.bodb02.wsv_nap" TimeOut="600" />
+		<Setting Key="Main_TraderPerformance_GetDetailReport_PH" SpName="Acc_Rpt_TraderPerformanceDetail_SoccerPH" DbName="DBACC.bodb02.wsv_nap" TimeOut="600" />
+	  </Function>
+	<Function Name="Special - Save Bet Report">
+		<Setting Key="Special_SaveBet_GetListSport" SpName="NAP_SaveBet_ListSportByDate" DbName="DBWH.bodb_dwrs.wsv_nap"></Setting>
+		<Setting Key="Special_SaveBet_GetListLeague" SpName="NAP_SaveBet_ListLeagueBySport" DbName="DBWH.bodb_dwrs.wsv_nap"></Setting>
+		<Setting Key="Special_SaveBet_GetListMatch" SpName="NAP_SaveBet_ListMatchByLeague" DbName="DBWH.bodb_dwrs.wsv_nap"></Setting>
+	</Function>
+	<Function Name="Misc - Auto Generated Report">
+		<Setting Key="Acc_UserLog_AttachmentDownload_TrackingIns" SpName="Acc_UserLog_AttachmentDownload_TrackingIns" DbName="DBWH.bodb_dwrs.wsv_nap" />
+	</Function>
+	<Function Name="Win Loss - League Win Loss">
+		<Setting Key="WinLoss_LeagueWinLoss_GetLeagueWinLoss" SpName="Acc_Rpt_LeagueWL_Sporttype_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="2400">
+			<Mapping DataField="VirtualIncome" ObjectProperty="VirtualWinLoss" />
+		</Setting>
+		<Setting Key="WinLoss_LeagueWinLoss_GetBetTypes" SpName="Acc_Rpt_LeagueWL_Bettype_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="2400">
+			<Mapping DataField="VirtualIncome" ObjectProperty="VirtualWinLoss" />
+			<Mapping DataField="BetTypeID" ObjectProperty="Bettype" />
+		</Setting>
+		<Setting Key="WinLoss_LeagueWinLoss_GetMatches" SpName="Acc_Rpt_LeagueWL_Match_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="2400">
+			<Mapping DataField="VirtualIncome" ObjectProperty="VirtualWinLoss" />
+		</Setting>
+		<Setting Key="WinLoss_LeagueWinLoss_GetSites" SpName="Acc_Rpt_LeagueWL_Site_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="2400">
+			<Mapping DataField="VirtualIncome" ObjectProperty="VirtualWinLoss" />
+		</Setting>
+		<Setting Key="WinLoss_LeagueWinLoss_GetSuper" SpName="Acc_Rpt_LeagueWL_Super_Old" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="2400">
+			<Mapping DataField="VirtualIncome" ObjectProperty="VirtualWinLoss" />
+		</Setting>
+		<Setting Key="WinLoss_LeagueWinLoss_GetSiteFilter" SpName="Acc_Rpt_SiteList" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="2400" />
+		<Setting Key="WinLoss_LeagueWinLoss_GetPermisionProfileID" SpName="Acc_Rpt_GetPermisionProfileID" DbName="DBWH.bodb_dwrs.wsv_nap" />
+		<Setting Key="Acc_Rpt_LeagueWL_BetType" SpName="Acc_Rpt_LeagueWL_BetType" DbName="DBWH.bodb_dwrs.wsv_nap">
+			<Mapping DataField="VirtualIncome" ObjectProperty="VirtualWinLoss" />
+			<Mapping DataField="BetTypeID" ObjectProperty="Bettype" />
+		</Setting>
+		<Setting Key="Acc_Rpt_LeagueWL_Match" SpName="Acc_Rpt_LeagueWL_Match" DbName="DBWH.bodb_dwrs.wsv_nap">
+			<Mapping DataField="VirtualIncome" ObjectProperty="VirtualWinLoss" />
+		</Setting>
+		<Setting Key="WinLoss_LeagueWinLoss_GetSports" SpName="Acc_Rpt_LeagueWL_SporttypeSel" DbName="DBWH.bodb_dwrs.wsv_nap" TimeOut="600" >
+			<Mapping DataField="BetGroupName" ObjectProperty="BetTypeGroupName" />
+		</Setting>
+		<Setting Key="WinLoss_LeagueWinLoss_GetLeagueSuggestion" SpName="Acc_Rpt_LeagueWL_GetLeagueBySport" DbName="DBACC.bodb02.wsv_nap" TimeOut="600" />
+		<Setting Key="WinLoss_LeagueWinLoss_GetVirtualRate" SpName="Acc_Rpt_LeagueWL_CustVirtualMultiplierSel" DbName="DBACC.bodb02.wsv_nap" TimeOut="600">
+			<Mapping DataField="virtualMultiplier" ObjectProperty="VirtualRate" />
+			<Mapping DataField="islive" ObjectProperty="LiveStatus" />
+		</Setting>
+		<Setting Key="Acc_Rpt_LeagueWL_Margin_6_Months" SpName="Acc_Rpt_LeagueWL_Margin_6_Months" DbName="DBWH.bodb_dwrs.wsv_nap">
+			<Mapping DataField="[Date]" ObjectProperty="Date" />
+			<Mapping DataField="[LeagueId]" ObjectProperty="LeagueId" />
+			<Mapping DataField="[CompanyMargin]" ObjectProperty="CompanyMargin" />
+		</Setting>
+	</Function>
+	<Function Name="Misc - Duplicate Tickets">
+		<Setting Key="Misc_DuplicateTickets_GetReport" SpName="Acc_Rpt_DuplicatedTicketsSel" DbName="DBRPT.bodb_Report.wsv_nap" TimeOut="600" />
+		<Setting Key="Acc_Rpt_DuplicatedTicketsCheckCashOut" SpName="Acc_Rpt_DuplicatedTicketsCheckCashOut" DbName="DBRPT.bodb_Report.wsv_nap" TimeOut="600" />
+	</Function>
+	<Function Name="Home - Most Visited Page">
+		<Setting Key="Home_MostVisitedPage_GetMostvisitedPage" SpName="Acc_FunctionUsageSel" DbName="DBMA.bodb_Maintenance.wsv_nap">
+		</Setting>
+		<Setting Key="Home_MostVisitedPage_UpdateMostvisitedPageCount" SpName="Acc_FunctionUsageUpdVisitedCount" DbName="DBMA.bodb_Maintenance.wsv_nap">
+		</Setting>
+		<Setting Key="Home_MostVisitedPage_UpdateMostvisitedPagePosition" SpName="Acc_FunctionUsageUpdPosition" DbName="DBMA.bodb_Maintenance.wsv_nap">
+		</Setting>
+		<Setting Key="Home_MostVisitedPage_DeleteMostvisitedPage" SpName="Acc_FunctionUsageDel" DbName="DBMA.bodb_Maintenance.wsv_nap">
+		</Setting>
+	</Function>
+	<Function Name="BeConstructPerformance">
+		<Setting Key="Acc_Rpt_BetConstructPerformance" SpName="Acc_Rpt_BetConstructPerformance" DbName="DBWH.bodb_dwrs.wsv_nap" >
+			<Mapping DataField="RptDate" ObjectProperty="Date" />
+		</Setting>
+	</Function>
+	<Function Name="SabaPromotion">
+		<Setting Key="Acc_Rpt_SabaPromotion" SpName="Acc_Rpt_SabaPromotion" DbName="DBWH.bodb_dwrs.wsv_nap" >
+			<Mapping DataField="RptDate" ObjectProperty="Date" />
+		</Setting>
+		<Setting Key="Acc_Rpt_SabaPromotion_Promo_Sel" SpName="Acc_Rpt_SabaPromotion_Promo_Sel" DbName="DBWH.bodb_dwrs.wsv_nap"></Setting>
+	</Function>
+	<Function Name="TGR">
+		<Setting Key="TGRS_LeagueGroupSoccer_Get" SpName="TGRS_LeagueGroupSoccer_Get" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_UserSetting_GetBettypes" SpName="TGRS_UserSetting_GetBettypes" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_BetType" SpName="TGRS_Rpt_PerformanceDetail_BetType" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+			<Mapping DataField="BetType" ObjectProperty="BetTypeId" />
+			<Mapping DataField="TypeName" ObjectProperty="BetTypeName" />
+		</Setting>
+		<Setting Key="TGRS_LeagueExclusion_SelectConfig" SpName="TGRS_LeagueExclusion_SelectConfig" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice" SpName="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_Trader" SpName="TGRS_Rpt_PerformanceDetail_Bettype_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+			<Mapping DataField="TypeName" ObjectProperty="BetTypeName" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_League" SpName="TGRS_Rpt_PerformanceDetail_Bettype_League" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="BetChoiceCount" ObjectProperty="NoOfBetChoices" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice_League" SpName="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice_League" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="BetChoiceCount" ObjectProperty="NoOfBetChoices" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_Trader_Match" SpName="TGRS_Rpt_PerformanceDetail_Bettype_Trader_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_League_Trader" SpName="TGRS_Rpt_PerformanceDetail_Bettype_League_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+			<Mapping DataField="TypeName" ObjectProperty="BetTypeName" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_League_BetChoice" SpName="TGRS_Rpt_PerformanceDetail_Bettype_League_BetChoice" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_League_Trader_Match" SpName="TGRS_Rpt_PerformanceDetail_Bettype_League_Trader_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_League" SpName="TGRS_Rpt_PerformanceDetail_League" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="BetChoiceCount" ObjectProperty="NoOfBetChoices" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_League_Trader" SpName="TGRS_Rpt_PerformanceDetail_League_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Trader" SpName="TGRS_Rpt_PerformanceDetail_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Trader_Match" SpName="TGRS_Rpt_PerformanceDetail_Trader_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_League_Trader_Match" SpName="TGRS_Rpt_PerformanceDetail_League_Trader_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_League_Match" SpName="TGRS_Rpt_PerformanceDetail_League_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_League_Trader_Match_Bettype" SpName="TGRS_Rpt_PerformanceDetail_League_Trader_Match_Bettype" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_ScoreDetail" SpName="TGRS_Rpt_ScoreDetail" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_League_Match_Bettype" SpName="TGRS_Rpt_PerformanceDetail_League_Match_Bettype" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Trader_Match_Bettype" SpName="TGRS_Rpt_PerformanceDetail_Trader_Match_Bettype" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Grade" SpName="TGRS_Rpt_PerformanceDetail_Grade" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Grade_Trader" SpName="TGRS_Rpt_PerformanceDetail_Grade_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Grade_League" SpName="TGRS_Rpt_PerformanceDetail_Grade_League" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Team" SpName="TGRS_Rpt_PerformanceDetail_Team" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Team_Trader" SpName="TGRS_Rpt_PerformanceDetail_Team_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Team_League" SpName="TGRS_Rpt_PerformanceDetail_Team_League" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Team_Trader_Match" SpName="TGRS_Rpt_PerformanceDetail_Team_Trader_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Grade_Trader_Match_Bettype" SpName="TGRS_Rpt_PerformanceDetail_Grade_Trader_Match_Bettype" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Team_League_Trader" SpName="TGRS_Rpt_PerformanceDetail_Team_League_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Team_League_Trader_Match" SpName="TGRS_Rpt_PerformanceDetail_Team_League_Trader_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Team_SelList" SpName="TGRS_Team_SelList" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Grade_Trader_Match" SpName="TGRS_Rpt_PerformanceDetail_Grade_Trader_Match" DbName="DBTGRS.bodb_TGRS.wsv_tgrs"/>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Grade_League_Trader" SpName="TGRS_Rpt_PerformanceDetail_Grade_League_Trader" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="Username" ObjectProperty="TraderName" />
+			<Mapping DataField="CustId" ObjectProperty="TraderId" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice_PointHDP" SpName="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice_PointHDP" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice_PointHDP_League" SpName="TGRS_Rpt_PerformanceDetail_Bettype_BetChoice_PointHDP_League" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="TraderCount" ObjectProperty="NoOfTraders" />
+			<Mapping DataField="BetChoiceCount" ObjectProperty="NoOfBetChoices" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+		<Setting Key="TGRS_Rpt_PerformanceDetail_Bettype_League_BetChoice_PointHDP" SpName="TGRS_Rpt_PerformanceDetail_Bettype_League_BetChoice_PointHDP" DbName="DBTGRS.bodb_TGRS.wsv_tgrs">
+			<Mapping DataField="LeagueCount" ObjectProperty="NoOfLeagues" />
+			<Mapping DataField="MatchCount" ObjectProperty="NoOfMatches" />
+		</Setting>
+	</Function>
+</Functions>
