@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DotNet9ConsoleApp.Helpers;
+﻿namespace DotNet9ConsoleApp.Helpers;
 
 public class KLProdHelper(string directory, Dictionary<string, string> map)
 {
@@ -12,15 +6,16 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
 
     public void Action()
     {
+        const string klprodBranch = "226231-klprod";
         gitOperation.FetchAndPrune();
-        gitOperation.DeleteBranch("klprod", false);
+        gitOperation.DeleteBranch(klprodBranch, false);
         var mainBranch = GetMainBranch();
         if (string.IsNullOrEmpty(mainBranch))
         {
             return;
         }
 
-        gitOperation.CreateBranch("klprod", mainBranch);
+        gitOperation.CreateBranch(klprodBranch, mainBranch);
 
         var klprodFile = CopyAppSetting();
         if (!string.IsNullOrEmpty(klprodFile))
@@ -37,7 +32,7 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
             ProjectHelper.AddKLNoneRemove(csprojFile);
         }
 
-        gitOperation.Commit("config: klprod");
+        gitOperation.Commit("feat: init setting klprod");
         gitOperation.Push();
     }
 
@@ -47,8 +42,8 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
         {
             return "main";
         }
-        
-        if (gitOperation.CheckRemoteBranchExisted("main"))
+
+        if (gitOperation.CheckRemoteBranchExisted("master"))
         {
             return "master";
         }
@@ -57,6 +52,7 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
 
         return string.Empty;
     }
+
     private string CopyAppSetting()
     {
         var files = Directory.GetFiles(directory, "*.json", SearchOption.AllDirectories);
@@ -66,7 +62,7 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
             var path = Path.GetDirectoryName(file);
             if (string.Equals(filename, "appsettings.PROD.json", StringComparison.CurrentCultureIgnoreCase))
             {
-                var newFile= Path.Combine(path, "appsettings.KLPROD.json");
+                var newFile = Path.Combine(path, "appsettings.KLPROD.json");
                 File.Copy(file, newFile);
 
                 return newFile;
@@ -86,6 +82,5 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
         }
 
         File.WriteAllText(file, text);
-
     }
 }
