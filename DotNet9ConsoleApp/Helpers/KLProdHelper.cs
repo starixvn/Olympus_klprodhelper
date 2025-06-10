@@ -28,6 +28,15 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
             ReplaceSetting(klprodFile);
         }
 
+        var csprojFiles = Directory.GetFiles(Path.GetDirectoryName(klprodFile), "*.csproj");
+        foreach (var csprojFile in csprojFiles)
+        {
+            ProjectHelper.AddKLContent(csprojFile);
+            ProjectHelper.AddKLContentRemove(csprojFile);
+            ProjectHelper.AddKLNone(csprojFile);
+            ProjectHelper.AddKLNoneRemove(csprojFile);
+        }
+
         gitOperation.Commit("config: klprod");
         gitOperation.Push();
     }
