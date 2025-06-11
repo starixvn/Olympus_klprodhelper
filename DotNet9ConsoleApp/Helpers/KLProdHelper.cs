@@ -16,6 +16,7 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
         }
 
         gitOperation.CreateBranch(klprodBranch, mainBranch);
+        gitOperation.CheckoutBranch(klprodBranch);
 
         var klprodFile = CopyAppSetting();
         if (!string.IsNullOrEmpty(klprodFile))
@@ -48,7 +49,7 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
             return "master";
         }
 
-        Console.WriteLine("Không tìm thấy branch origin/master và origin/main");
+        Console.WriteLine("Cannot find branch origin/master or origin/main");
 
         return string.Empty;
     }
@@ -63,13 +64,17 @@ public class KLProdHelper(string directory, Dictionary<string, string> map)
             if (string.Equals(filename, "appsettings.PROD.json", StringComparison.CurrentCultureIgnoreCase))
             {
                 var newFile = Path.Combine(path, "appsettings.KLPROD.json");
+                if (File.Exists(newFile))
+                {
+                    File.Delete(newFile);
+                }
                 File.Copy(file, newFile);
 
                 return newFile;
             }
         }
 
-        Console.WriteLine("KHong tim thay app setting");
+        Console.WriteLine("Cannot find app setting");
         return string.Empty;
     }
 
