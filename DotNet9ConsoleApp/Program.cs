@@ -4,10 +4,8 @@ using DotNet9ConsoleApp.Helpers;
 
 Console.WriteLine("Hello, World!");
 
-
 var settingFile = @"settings.txt";
-var root = @"D:\SourceCode\Temp";
-
+var root = @"D:\Projects\Olympus\auto-fantasy-service";
 
 var map = SettingHelper.Read(settingFile);
 
@@ -24,7 +22,7 @@ bool IsGitDirectory(string directory)
             return true;
         }
     }
-    
+
     return false;
 }
 

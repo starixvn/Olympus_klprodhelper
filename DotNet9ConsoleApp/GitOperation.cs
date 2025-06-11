@@ -1,13 +1,9 @@
-using System;
 using System.Diagnostics;
-using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace DotNet9ConsoleApp
 {
     public class GitOperation(string directory)
     {
-
         public void Clean()
         {
             try
@@ -119,7 +115,7 @@ namespace DotNet9ConsoleApp
 
                     // Get the first line which will be the most recent branch
                     var lines = output.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(l => l.Replace("'",""))
+                        .Select(l => l.Replace("'", ""))
                         .Where(l => l.StartsWith("origin/"))
                         .Select(l =>
                         {
@@ -128,10 +124,10 @@ namespace DotNet9ConsoleApp
                             var date = DateTime.Parse(parts[1]);
                             return (b, date);
                         })
-                        
+
                         .OrderByDescending(o => o.date)
                         .ToList();
-                    latestBranch  = lines.FirstOrDefault().b.Trim();
+                    latestBranch = lines.FirstOrDefault().b.Trim();
                 }
 
                 if (string.IsNullOrEmpty(latestBranch))
@@ -223,7 +219,6 @@ namespace DotNet9ConsoleApp
                     if (!string.IsNullOrEmpty(error))
                     {
                         Console.WriteLine($"Error adding files: {error}");
-                        return;
                     }
                 }
 
@@ -265,7 +260,7 @@ namespace DotNet9ConsoleApp
         {
             try
             {
-                // First get current branch name
+                // Get the current branch name
                 var branchStartInfo = new ProcessStartInfo
                 {
                     FileName = "git",
@@ -283,7 +278,7 @@ namespace DotNet9ConsoleApp
                     process.WaitForExit();
                     currentBranch = process.StandardOutput.ReadToEnd().Trim();
                     var error = process.StandardError.ReadToEnd();
-                    
+
                     if (!string.IsNullOrEmpty(error))
                     {
                         Console.WriteLine($"Error getting current branch: {error}");
@@ -297,11 +292,27 @@ namespace DotNet9ConsoleApp
                     return;
                 }
 
-                // Push the current branch to remote
+                // Unset upstream to avoid tracking the wrong remote branch
+                var unsetUpstreamInfo = new ProcessStartInfo
+                {
+                    FileName = "git",
+                    Arguments = $"branch --unset-upstream",
+                    WorkingDirectory = directory,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+                using (var process = Process.Start(unsetUpstreamInfo))
+                {
+                    process.WaitForExit();
+                }
+
+                // Always push with --set-upstream to ensure tracking the correct remote branch with the same name
                 var pushStartInfo = new ProcessStartInfo
                 {
                     FileName = "git",
-                    Arguments = $"push origin {currentBranch}",
+                    Arguments = $"push --set-upstream origin {currentBranch}",
                     WorkingDirectory = directory,
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
@@ -353,7 +364,7 @@ namespace DotNet9ConsoleApp
                     process.WaitForExit();
                     currentBranch = process.StandardOutput.ReadToEnd().Trim();
                     var error = process.StandardError.ReadToEnd();
-                    
+
                     if (!string.IsNullOrEmpty(error))
                     {
                         Console.WriteLine($"Error getting current branch: {error}");
@@ -513,7 +524,7 @@ namespace DotNet9ConsoleApp
                     process.WaitForExit();
                     currentBranch = process.StandardOutput.ReadToEnd().Trim();
                     var error = process.StandardError.ReadToEnd();
-                    
+
                     if (!string.IsNullOrEmpty(error))
                     {
                         Console.WriteLine($"Error getting current branch: {error}");
@@ -559,28 +570,28 @@ namespace DotNet9ConsoleApp
                 {
                     // Delete remote branch
                     var deleteRemoteStartInfo = new ProcessStartInfo
-                {
-                    FileName = "git",
-                    Arguments = $"push origin --delete {branchName}",
-                    WorkingDirectory = directory,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true
-                };
-
-                using (var process = Process.Start(deleteRemoteStartInfo))
-                {
-                    process.WaitForExit();
-                    var output = process.StandardOutput.ReadToEnd();
-                    var error = process.StandardError.ReadToEnd();
-
-                    if (!string.IsNullOrEmpty(error))
                     {
-                        Console.WriteLine($"Error deleting remote branch: {error}");
-                    }
-                    else
+                        FileName = "git",
+                        Arguments = $"push origin --delete {branchName}",
+                        WorkingDirectory = directory,
+                        RedirectStandardOutput = true,
+                        RedirectStandardError = true,
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    };
+
+                    using (var process = Process.Start(deleteRemoteStartInfo))
                     {
+                        process.WaitForExit();
+                        var output = process.StandardOutput.ReadToEnd();
+                        var error = process.StandardError.ReadToEnd();
+
+                        if (!string.IsNullOrEmpty(error))
+                        {
+                            Console.WriteLine($"Error deleting remote branch: {error}");
+                        }
+                        else
+                        {
                             Console.WriteLine($"Successfully deleted remote branch '{branchName}'");
                         }
                     }
@@ -796,6 +807,42 @@ namespace DotNet9ConsoleApp
                 return false;
             }
         }
-    }
 
-} 
+        public void CheckoutBranch(string branchName)
+        {
+            try
+            {
+                var checkoutStartInfo = new ProcessStartInfo
+                {
+                    FileName = "git",
+                    Arguments = $"checkout {branchName}",
+                    WorkingDirectory = directory,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+
+                using (var process = Process.Start(checkoutStartInfo))
+                {
+                    process.WaitForExit();
+                    var output = process.StandardOutput.ReadToEnd();
+                    var error = process.StandardError.ReadToEnd();
+
+                    if (!string.IsNullOrEmpty(error))
+                    {
+                        Console.WriteLine($"Error checking out branch: {error}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Checked out branch '{branchName}'");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during CheckoutBranch operation in directory '{directory}': {ex.Message}");
+            }
+        }
+    }
+}
