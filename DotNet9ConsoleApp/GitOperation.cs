@@ -844,5 +844,43 @@ namespace DotNet9ConsoleApp
                 Console.WriteLine($"Error during CheckoutBranch operation in directory '{directory}': {ex.Message}");
             }
         }
+
+        public void PullLatest(string branchName)
+        {
+            try
+            {
+                var pullStartInfo = new ProcessStartInfo
+                {
+                    FileName = "git",
+                    Arguments = $"pull origin {branchName}",
+                    WorkingDirectory = directory,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                };
+
+                using (var process = Process.Start(pullStartInfo))
+                {
+                    process.WaitForExit();
+                    var output = process.StandardOutput.ReadToEnd();
+                    var error = process.StandardError.ReadToEnd();
+
+                    if (!string.IsNullOrEmpty(error))
+                    {
+                        Console.WriteLine($"Error pulling latest changes: {error}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Successfully pulled latest changes from origin/{branchName}:");
+                        Console.WriteLine(output);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error during PullLatest operation in directory '{directory}': {ex.Message}");
+            }
+        }
     }
 }

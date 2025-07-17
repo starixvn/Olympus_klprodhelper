@@ -14,6 +14,9 @@
     <None Update="FanexData\SpName.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="folders.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="settings.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
