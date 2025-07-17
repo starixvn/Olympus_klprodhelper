@@ -1,11 +1,15 @@
 10.99.98.117:7446	onebookum.starix-klprod.gamora.prod
+fanex_um_uat:5000	onebookum.starix-klprod.gamora.prod
 napapi.starix-uat.nebula.prod	napapi.starix-klprod.gamora.prod
 10.99.98.117:16379	vn-nap777.tcp-kluat.gamora.prod:16777
+10.2.27.8:16379	vn-nap777.gamora.prod:16777 
 10.99.27.15:9006	sentryst-ovs.ops-kluat.gamora.prod
+10.99.99.51:801	sentryst-ovs.ops-kluat.gamora.prod
 09bba39eacc240cd851b657db36b5446	52f990100eaa4f5e9232022f08dd3056
 vn-settle-internal-api-uat.nebula.prod	settlement-internal.st-kluat.gamora.prod 
 vn-fanexdataservice-uat.nebula.prod	fanexdataservice.st-kluat.gamora.prod
 vn-nex-vault-uat.nebula.prod	vault-stx.ops-kluat.gamora.prod
-10.99.98.117	rabbit.tcp-kluat.gamora.prod
 vn-remotingref-uat.nebula.prod	vn-remotingref.starix-klprod.gamora.prod
-10.2.27.8:8787	napmailservice.st-kluat.gamora.prod
+10.99.98.117:8787	napmailservice.starix-klprod.gamora.prod
+10.99.98.117	rabbit.tcp-kluat.gamora.prod
+defaultDatabase=13	defaultDatabase=11

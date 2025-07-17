@@ -16,6 +16,9 @@ public class KLUatHelper(string directory, Dictionary<string, string> map)
         gitOperation.CheckoutBranch(mainBranch);
         gitOperation.PullLatest(mainBranch);
 
+        // Delete unwanted appsettings files
+        DeleteUnwantedAppSettings();
+
         var uatFile = FindAppSettingsUAT();
         if (!string.IsNullOrEmpty(uatFile))
         {
@@ -91,5 +94,38 @@ public class KLUatHelper(string directory, Dictionary<string, string> map)
         }
 
         return hasChanges;
+    }
+
+    private void DeleteUnwantedAppSettings()
+    {
+        var filesToDelete = new[] { "appsettings.PROD.json", "appsettings.KLDR.json" };
+        var deletedFiles = new List<string>();
+
+        foreach (var fileName in filesToDelete)
+        {
+            var files = Directory.GetFiles(directory, fileName, SearchOption.AllDirectories);
+            foreach (var file in files)
+            {
+                try
+                {
+                    File.Delete(file);
+                    deletedFiles.Add(file);
+                    Console.WriteLine($"Deleted: {file}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error deleting {file}: {ex.Message}");
+                }
+            }
+        }
+
+        if (deletedFiles.Count > 0)
+        {
+            Console.WriteLine($"Successfully deleted {deletedFiles.Count} unwanted appsettings files");
+        }
+        else
+        {
+            Console.WriteLine("No unwanted appsettings files found to delete");
+        }
     }
 }
